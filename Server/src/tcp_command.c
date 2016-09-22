@@ -308,15 +308,13 @@ int get_obstacle_data(int src,int dst,int sensor_num) {
     ret = recv(client_sock[client_index] , client_message ,1024, 0);
    
     value = get_data(client_message);
-
+#ifdef __DEBUG__
     int i;
     for(i = 0 ; i < ret; i++) {
       printf("0x%x ",client_message[i]);
     }
       printf("\n");
-    printf("0x%x 0x%x 0x%x 0x%x 0x%x",value[0],value[1],value[2],value[3],value[4]);
-    printf("RSSI = %d\n",(value[1] << 24 ) | (value[2] << 16) | (value[3] << 8) | (value[4]));
-    printf("\n");
+#endif
     return value[0];
 }
 
