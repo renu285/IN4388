@@ -317,6 +317,12 @@ void turnRight(char *data)
 }
 
 //Get RSSI from ESP8266
+/* Get RSSI from ESP8266 with hinternal command INT_RSSI. 
+   Once ESP8266 reads its RSSI, it replies to Arduino with 
+   internal command INT_RSSI. Reception of RSSI is handled 
+   in onPacket function
+ */
+
 void getRSSI()
 {
   char data[1];
