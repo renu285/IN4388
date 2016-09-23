@@ -316,7 +316,13 @@ void turnRight(char *data)
   tempMovementTime = millis()/1000; 
 }
 
-//Get RSSI from ESP8266
+/* 
+ * Get RSSI from ESP8266 with internal command INT_RSSI. 
+ * Once ESP8266 reads its RSSI, it replies to Arduino with 
+ * internal command "INT_RSSI". Reception of RSSI is handled 
+ * in onPacket function
+ */
+ 
 void getRSSI()
 {
   char data[1];
@@ -332,6 +338,9 @@ void enableDemo()
 }
 
 //Get ID of robot
+
+
+ 
 char getID()
 {
   return EEPROM.read(ADDRESS);
