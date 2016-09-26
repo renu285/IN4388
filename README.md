@@ -22,7 +22,7 @@ Else, ESP8266 will drop the packet because of the connection matrix. Use 5V 1A
 chargers to charge the power bank. Another option would be to charge it from 
 Laptop/PC USB
 
-Arduino library for Queue to execute received commands one afteer the other:
+Arduino library for Queue to execute received commands one after the other:
 
 http://playground.arduino.cc/Code/QueueList
 http://playground.arduino.cc/Code/QueueArray
