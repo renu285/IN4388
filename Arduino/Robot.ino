@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <EEPROM.h>
 #include "PacketSerial.h"
 
@@ -1011,5 +1010,3 @@ void OnReceive(char src, char dst, char internal, char tcp, char fwd, char count
       handleCommands(src, dst, internal, tcp, fwd, counterH, counterL, datalen, command, data);
   }
 }
->>>>>>> 1485cf39a82eba759a22486ec45fa32a21726daf
-
