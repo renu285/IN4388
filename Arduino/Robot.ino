@@ -414,13 +414,7 @@ void onPacket(const uint8_t* buffer, size_t size)
     }
     //Update RSSI_Value variable with hlatest RSSI
     RSSI_Value = (buffer[7] << 24) | (buffer[8] << 16) | (buffer[9] << 8) | (buffer[10]);
-    char temp[5];
-    temp[0] = 0x08;
-    temp[1] = RSSI_Value >> 24;
-    temp[2] = RSSI_Value >> 16;
-    temp[3] = RSSI_Value >> 8;
-    temp[4] = RSSI_Value;
-    sendPacket(0, 0, 0, TCP, ACK, counterH, counterL, 5, temp);
+    
   }
 
   //Call callback function
